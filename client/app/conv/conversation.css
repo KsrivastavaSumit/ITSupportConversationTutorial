@@ -6,7 +6,6 @@
   border-radius: 8px;
   border-color: #blue;
 }
-
 .scrolling-box {
   padding: 0px 5px;
   height: calc(100vh - 200px);

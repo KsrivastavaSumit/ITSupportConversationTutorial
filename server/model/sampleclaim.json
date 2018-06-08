@@ -1,0 +1,1193 @@
+{
+  "eventId": 7845,
+  "countyOfInjury": "",
+  "eventNumber": "007845",
+  "eventTypeCode": {
+    "id": 0,
+    "shortCode": "",
+    "desc": "",
+    "codeTable": "EVENT_TYPE"
+  },
+  "eventStatusCode": {
+    "id": 0,
+    "shortCode": "",
+    "desc": "",
+    "codeTable": "EVENT_STATUS"
+  },
+  "eventIndCode": {
+    "id": 0,
+    "shortCode": "",
+    "desc": "",
+    "codeTable": "EVENT_INDICATOR"
+  },
+  "eventDescription": "Initial Claim Report.",
+  "briefDesc": "",
+  "deptEid": {
+    "id": 806,
+    "shortCode": "FN",
+    "desc": "Nery",
+    "codeTable": "DEPARTMENT"
+  },
+  "deptInvolvedEid": {
+    "id": 0,
+    "shortCode": "",
+    "desc": "",
+    "codeTable": "DEPARTMENT"
+  },
+  "addr1": "125 W Front St",
+  "addr2": "",
+  "addr3": "",
+  "addr4": "",
+  "city": "Sunset",
+  "stateId": {
+    "id": 0,
+    "shortCode": "",
+    "desc": "",
+    "codeTable": "STATES"
+  },
+  "zipCode": "76270",
+  "countryCode": {
+    "id": 70,
+    "shortCode": "USA",
+    "desc": "United States",
+    "codeTable": "COUNTRY"
+  },
+  "locationAreaDesc": "125 W Front St, Sunset TX 76270",
+  "primaryLocCode": {
+    "id": 0,
+    "shortCode": "",
+    "desc": "",
+    "codeTable": "PRIMARY_LOCATION"
+  },
+  "locationTypeCode": {
+    "id": 0,
+    "shortCode": "",
+    "desc": "",
+    "codeTable": "LOCATION_TYPE"
+  },
+  "onPremiseFlag": false,
+  "noOfInjuries": 0,
+  "noOfFatalities": 0,
+  "causeCode": {
+    "id": 0,
+    "shortCode": "",
+    "desc": "",
+    "codeTable": "CAUSE_CODE"
+  },
+  "dateOfEvent": "11/08/2017",
+  "timeOfEvent": "1:00 PM",
+  "dateReported": "",
+  "timeReported": "12:00 AM",
+  "rptdByEid": {
+    "id": 0,
+    "desc": ""
+  },
+  "dateRptdToRm": "",
+  "dateToFollowUp": "",
+  "accountId": 0,
+  "datePhysAdvised": "",
+  "timePhysAdvised": "",
+  "treatmentGiven": false,
+  "releaseSigned": false,
+  "deptHeadAdvised": false,
+  "physNotes": "",
+  "dateCarrierNotif": "",
+  "injuryFromDate": "",
+  "injuryToDate": "",
+  "eventDescription_HTMLComments": "Initial Claim Report.",
+  "locationAreaDesc_HTMLComments": "125 W Front St, Sunset TX 76270",
+  "requireIntervention": false,
+  "confRecFlag": false,
+  "catastropheNumber": {
+    "id": 0,
+    "shortCode": "",
+    "desc": "",
+    "codeTable": "CATASTROPHE_NUMBER"
+  },
+  "eventXAction": [],
+  "eventXOutcome": [],
+  "eventQM": {
+    "eventId": 7845,
+    "medCaseNumber": "",
+    "medFileCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_MED_FILES"
+    },
+    "medIndCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_MED_INDICATORS"
+    },
+    "irStatusCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_STATUS"
+    },
+    "irReviewerUid": [
+      {
+        "groupID": 0,
+        "userID": 0,
+        "name": "",
+        "type": ""
+      }
+    ],
+    "irReviewerName": "",
+    "irDetermCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_DETERMINATION"
+    },
+    "irReviewDate": "",
+    "irFollowUpDate": "",
+    "irComments": "",
+    "irRecActions": "",
+    "paStatusCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_STATUS"
+    },
+    "paReviewerEid": {
+      "id": 0,
+      "desc": ""
+    },
+    "paDetermCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_DETERMINATION"
+    },
+    "paReviewDate": "",
+    "paFollowUpDate": "",
+    "paComments": "",
+    "paRecActions": "",
+    "cdStatusCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_STATUS"
+    },
+    "cdCommitteeCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_COMMITTEES"
+    },
+    "cdDeptEid": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "DEPARTMENT"
+    },
+    "cdDetermCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_DETERMINATION"
+    },
+    "cdReviewDate": "",
+    "cdFollowUpDate": "",
+    "cdComments": "",
+    "cdRecActions": "",
+    "qmStatusCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_STATUS"
+    },
+    "qmReviewerUid": [
+      {
+        "groupID": 0,
+        "userID": 0,
+        "name": "",
+        "type": ""
+      }
+    ],
+    "qmReviewerName": "",
+    "qmDetermCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_DETERMINATION"
+    },
+    "qmReviewDate": "",
+    "qmCloseDate": "",
+    "qmComments": "",
+    "qmRecActions": "",
+    "supplementals": null,
+    "dttmRcdLastUpd": null,
+    "links": [],
+    "associatedEntities": [],
+    "sysExData": null
+  },
+  "reporterEntity": {
+    "businessTypeCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "BUSINESS_TYPE"
+    },
+    "county": "",
+    "natureOfBusiness": "",
+    "sicCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "SIC_CODE"
+    },
+    "sicCodeDesc": "",
+    "wcFillingNumber": "",
+    "entityId": 0,
+    "firstName": "",
+    "alsoKnownAs": "",
+    "abbreviation": "",
+    "costCenterCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "COST_CENTER"
+    },
+    "addr1": "",
+    "addr2": "",
+    "city": "",
+    "countryCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "COUNTRY"
+    },
+    "stateId": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "STATES"
+    },
+    "zipCode": "",
+    "parentEid": {
+      "id": 0,
+      "desc": ""
+    },
+    "taxId": "",
+    "contact": "",
+    "comments": "",
+    "emailTypeCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "EMAIL_TYPE"
+    },
+    "emailAddress": "",
+    "sexCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "SEX_CODE"
+    },
+    "birthDate": "",
+    "phone1": "",
+    "phone2": "",
+    "faxNumber": "",
+    "effStartDate": "",
+    "effEndDate": "",
+    "parent1099EID": {
+      "id": 0,
+      "desc": ""
+    },
+    "entity1099Reportable": false,
+    "middleName": "",
+    "title": "",
+    "naicsCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "NAICS_CODES"
+    },
+    "freezePayments": false,
+    "organizationType": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "ORGANIZATION_TYPE"
+    },
+    "npiNumber": "",
+    "timeZoneCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "TIME_ZONE_CODES"
+    },
+    "prefix": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "ENTITY_PREFIX"
+    },
+    "suffixCommon": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "ENTITY_SUFFIX"
+    },
+    "suffixLegal": "",
+    "legalName": "",
+    "referenceNumber": "",
+    "legacyUniqueIdentifier": "",
+    "effectiveDate": "",
+    "expirationDate": "",
+    "adjusterEId": {
+      "id": 0,
+      "desc": ""
+    },
+    "idType": 0,
+    "lastName": "",
+    "addr3": "",
+    "addr4": "",
+    "deletedFlag": false,
+    "triggerDateField": "",
+    "overrideOfacCheck": false,
+    "rmUserId": [
+      {
+        "groupID": 0,
+        "userID": 0,
+        "name": "",
+        "type": ""
+      }
+    ],
+    "timeZoneTracking": false,
+    "emailPassword": "",
+    "hbrFeeLines": 0,
+    "hbrAmt": 0,
+    "mbrFeeLines": 0,
+    "mbrAmt": 0,
+    "mmseatinEditFlag": false,
+    "autoDiscFlg": false,
+    "autoDiscount": 0,
+    "htmlComments": "",
+    "rejectReasonText": "",
+    "rejectReasonText_HTMLComments": "",
+    "entityApprovalStatusCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "ENTITY_APPRV_REJ"
+    },
+    "currencyType": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "CURRENCY_TYPE"
+    },
+    "clientSequenceNumber": "",
+    "nameType": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "ENTITY_NAME_TYPE"
+    },
+    "ncciCarrierCode": "",
+    "dunsNumber": "",
+    "ausTetraNumber": "",
+    "experianBIN": "",
+    "hasAcceptedBankinginfo": null,
+    "combinedPayment": null,
+    "instructions": null,
+    "useEntityRole": false,
+    "gstNumber": "",
+    "gstStatus": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "GST_STATUS"
+    },
+    "gstRegistered": false,
+    "supplementals": [
+      {
+        "caption": "Claim Index Bureau Number",
+        "fieldName": "INDEX_BUREAU_NUMB",
+        "fieldType": "SuppTypeText",
+        "value": null,
+        "values": null
+      },
+      {
+        "caption": "EDI Employer Type",
+        "fieldName": "EMPLYR_TYP",
+        "fieldType": "SuppTypeCode",
+        "value": {
+          "id": 0,
+          "shortCode": "",
+          "desc": "",
+          "codeTable": "EMPLOYER_TYPE"
+        },
+        "values": null
+      },
+      {
+        "caption": "Taxonomy Code",
+        "fieldName": "TAXONOMY_TEXT",
+        "fieldType": "SuppTypeText",
+        "value": null,
+        "values": null
+      },
+      {
+        "caption": "EDI  R3 Claim Production Implementation Date",
+        "fieldName": "IAIA_IIICM_PD_DATE",
+        "fieldType": "SuppTypeDate",
+        "value": null,
+        "values": null
+      },
+      {
+        "caption": "Ohio Manual Number",
+        "fieldName": "OH_MANUAL_NUM_TEXT",
+        "fieldType": "SuppTypeText",
+        "value": null,
+        "values": null
+      },
+      {
+        "caption": "TLC Base No:",
+        "fieldName": "TLC_BASE_NO_TEXT",
+        "fieldType": "SuppTypeText",
+        "value": null,
+        "values": null
+      },
+      {
+        "caption": "EDI Claim Administrator Alternate Postal Code",
+        "fieldName": "CLM_ADMN_PCODE",
+        "fieldType": "SuppTypeText",
+        "value": null,
+        "values": null
+      },
+      {
+        "caption": "Washington (State) L&I Risk Class",
+        "fieldName": "WA_RISKCLASS_TEXT",
+        "fieldType": "SuppTypeText",
+        "value": null,
+        "values": null
+      },
+      {
+        "caption": "recognisition",
+        "fieldName": "RECOGNISITI_FLAG",
+        "fieldType": "SuppTypeCheckBox",
+        "value": false,
+        "values": null
+      },
+      {
+        "caption": "EDI Use Negative Payment",
+        "fieldName": "NEG_PAYMENT_FLAG",
+        "fieldType": "SuppTypeCode",
+        "value": {
+          "id": 0,
+          "shortCode": "",
+          "desc": "",
+          "codeTable": "YES_NO"
+        },
+        "values": null
+      },
+      {
+        "caption": "Washington (State) L&I Account ID",
+        "fieldName": "WA_ACCOUNT_ID_TEXT",
+        "fieldType": "SuppTypeText",
+        "value": null,
+        "values": null
+      },
+      {
+        "caption": "North Dakota Employer Account Number",
+        "fieldName": "ND_EMPR_ACCUT_TEXT",
+        "fieldType": "SuppTypeText",
+        "value": null,
+        "values": null
+      },
+      {
+        "caption": "EDI Insured Location Number",
+        "fieldName": "LOC_NUM",
+        "fieldType": "SuppTypeText",
+        "value": null,
+        "values": null
+      },
+      {
+        "caption": "EntityMulti",
+        "fieldName": "ENTITYMULTI",
+        "fieldType": "SuppTypeMultiEntity",
+        "value": null,
+        "values": []
+      },
+      {
+        "caption": "Admin ID",
+        "fieldName": "LSS_ADMIN_ID",
+        "fieldType": "SuppTypeNumber",
+        "value": 0,
+        "values": null
+      },
+      {
+        "caption": "EDI Insured Type",
+        "fieldName": "INSURD_TYP",
+        "fieldType": "SuppTypeCode",
+        "value": {
+          "id": 0,
+          "shortCode": "",
+          "desc": "",
+          "codeTable": "INSURED_TYPE"
+        },
+        "values": null
+      },
+      {
+        "caption": "Washington (State) L&I Uniform Business Identifier",
+        "fieldName": "WA_UBI_TEXT",
+        "fieldType": "SuppTypeText",
+        "value": null,
+        "values": null
+      },
+      {
+        "caption": "",
+        "fieldName": "ENTITY_ID",
+        "fieldType": "SuppTypePrimaryKey",
+        "value": 0,
+        "values": null
+      },
+      {
+        "caption": "Entity Suffix",
+        "fieldName": "ATTY_SUF_TEXT",
+        "fieldType": "SuppTypeText",
+        "value": null,
+        "values": null
+      },
+      {
+        "caption": "Pennsylvania Bureau Code",
+        "fieldName": "STE_AGNT_BRU_IDNT",
+        "fieldType": "SuppTypeText",
+        "value": null,
+        "values": null
+      },
+      {
+        "caption": "EDI Insurer Type",
+        "fieldName": "INSRUR_TYP",
+        "fieldType": "SuppTypeCode",
+        "value": {
+          "id": 0,
+          "shortCode": "",
+          "desc": "",
+          "codeTable": "INSURER_TYPE"
+        },
+        "values": null
+      },
+      {
+        "caption": "Vendor Number",
+        "fieldName": "LSS_VENDOR_NUMBER",
+        "fieldType": "SuppTypeText",
+        "value": null,
+        "values": null
+      },
+      {
+        "caption": "NYCDF NO:",
+        "fieldName": "CDF_NO_S_TEXT",
+        "fieldType": "SuppTypeText",
+        "value": null,
+        "values": null
+      }
+    ],
+    "dttmRcdLastUpd": null,
+    "links": [],
+    "associatedEntities": [],
+    "sysExData": null
+  },
+  "supplementals": [
+    {
+      "caption": "SanTestString",
+      "fieldName": "SAN_TEST_ST_TEXT",
+      "fieldType": "SuppTypeText",
+      "value": null,
+      "values": null
+    },
+    {
+      "caption": "test\"event date1",
+      "fieldName": "TESTEVENTDA_DATE",
+      "fieldType": "SuppTypeDate",
+      "value": null,
+      "values": null
+    },
+    {
+      "caption": "vaish checkbox field",
+      "fieldName": "VAISHCHECKB_FLAG",
+      "fieldType": "SuppTypeCheckBox",
+      "value": false,
+      "values": null
+    },
+    {
+      "caption": "SanTestNumber",
+      "fieldName": "SAN_TEST2_N_NUM",
+      "fieldType": "SuppTypeNumber",
+      "value": 0,
+      "values": null
+    },
+    {
+      "caption": "test hello 13",
+      "fieldName": "TEST_HELLO__CODE",
+      "fieldType": "SuppTypeCode",
+      "value": {
+        "id": 0,
+        "shortCode": "",
+        "desc": "",
+        "codeTable": "OVERTIME_HOURS"
+      },
+      "values": null
+    },
+    {
+      "caption": "vaish claim number lookup",
+      "fieldName": "VAISH_CLAIM_TEXT",
+      "fieldType": "SuppTypeClaimLookup",
+      "value": {
+        "id": 0,
+        "desc": ""
+      },
+      "values": null
+    },
+    {
+      "caption": "test Department Lookup",
+      "fieldName": "SAN_DEP_EID",
+      "fieldType": "SuppTypeEntity",
+      "value": {
+        "id": 0,
+        "shortCode": "",
+        "desc": "",
+        "codeTable": "DEPARTMENT"
+      },
+      "values": null
+    },
+    {
+      "caption": "",
+      "fieldName": "EVENT_ID",
+      "fieldType": "SuppTypePrimaryKey",
+      "value": 7845,
+      "values": null
+    },
+    {
+      "caption": "vaish Free text field",
+      "fieldName": "VAISH_FREE__MEMO",
+      "fieldType": "SuppTypeFreeText",
+      "value": null,
+      "values": null
+    },
+    {
+      "caption": "SanTestHyperlink",
+      "fieldName": "SAN_TEST_HY",
+      "fieldType": 23,
+      "value": "https://www.google.co.in/",
+      "values": null
+    },
+    {
+      "caption": "SanTestHTMLText",
+      "fieldName": "SAN_TEST_HT_HTML",
+      "fieldType": "SuppTypeHTML",
+      "value": null,
+      "values": null
+    },
+    {
+      "caption": "SanTestUserLookup",
+      "fieldName": "SAN_TEST_US_USRGRP",
+      "fieldType": "SuppTypeUserLookup",
+      "value": null,
+      "values": []
+    },
+    {
+      "caption": "testevent\"h1",
+      "fieldName": "TESTEVENTH1",
+      "fieldType": 23,
+      "value": "https://in.yahoo.com/",
+      "values": null
+    },
+    {
+      "caption": "Test",
+      "fieldName": "TESTCHECK_FLAG",
+      "fieldType": "SuppTypeCheckBox",
+      "value": false,
+      "values": null
+    },
+    {
+      "caption": "test Client lookup",
+      "fieldName": "SAN_CLIENT_EID",
+      "fieldType": "SuppTypeEntity",
+      "value": {
+        "id": 0,
+        "shortCode": "",
+        "desc": "",
+        "codeTable": "CLIENT"
+      },
+      "values": null
+    },
+    {
+      "caption": "vaish date",
+      "fieldName": "VAISH_DATE__DATE",
+      "fieldType": "SuppTypeDate",
+      "value": null,
+      "values": null
+    },
+    {
+      "caption": "test\"event's1",
+      "fieldName": "TESTEVENT1_FLAG",
+      "fieldType": "SuppTypeCheckBox",
+      "value": false,
+      "values": null
+    },
+    {
+      "caption": "SanTestGrid",
+      "fieldName": "SAN_TEST_GR_GRID",
+      "fieldType": "SuppTypeGrid",
+      "value": "KNALB",
+      "values": null
+    },
+    {
+      "caption": "testevent\"freetext'a1",
+      "fieldName": "TESTEVENTFR_MEMO",
+      "fieldType": "SuppTypeFreeText",
+      "value": null,
+      "values": null
+    },
+    {
+      "caption": "vaish currency field",
+      "fieldName": "VAISH_CURRE_AMT",
+      "fieldType": "SuppTypeCurrency",
+      "value": 0,
+      "values": null
+    },
+    {
+      "caption": "\"test001\"olive",
+      "fieldName": "TEST001_OLI_EID",
+      "fieldType": "SuppTypeEntity",
+      "value": {
+        "id": 0,
+        "shortCode": "",
+        "desc": "",
+        "codeTable": "DEPARTMENT"
+      },
+      "values": null
+    },
+    {
+      "caption": "SanTestEventNoLookup",
+      "fieldName": "SAN_TEST_EV_TEXT",
+      "fieldType": "SuppTypeEventLookup",
+      "value": {
+        "id": 0,
+        "desc": ""
+      },
+      "values": null
+    },
+    {
+      "caption": "Vaish event number lookup",
+      "fieldName": "VAISH_EVENT_TEXT",
+      "fieldType": "SuppTypeEventLookup",
+      "value": {
+        "id": 0,
+        "desc": ""
+      },
+      "values": null
+    },
+    {
+      "caption": "test\"eventcurrency1",
+      "fieldName": "TESTEVENTCU_AMT",
+      "fieldType": "SuppTypeCurrency",
+      "value": 0,
+      "values": null
+    },
+    {
+      "caption": "vaish Entity ",
+      "fieldName": "VAISH_ENTIT_EID",
+      "fieldType": "SuppTypeEntity",
+      "value": {
+        "id": 0,
+        "desc": ""
+      },
+      "values": null
+    },
+    {
+      "caption": "SanTestMultiState",
+      "fieldName": "SAN_TEST3_M",
+      "fieldType": "SuppTypeMultiState",
+      "value": null,
+      "values": []
+    },
+    {
+      "caption": "SanTestMultiEntity2",
+      "fieldName": "SAN_TEST2_M",
+      "fieldType": "SuppTypeMultiEntity",
+      "value": null,
+      "values": []
+    },
+    {
+      "caption": "vaish code field",
+      "fieldName": "VAISH_CODE__CODE",
+      "fieldType": "SuppTypeCode",
+      "value": {
+        "id": 0,
+        "shortCode": "",
+        "desc": "",
+        "codeTable": "OVERTIME_HOURS"
+      },
+      "values": null
+    },
+    {
+      "caption": "SanTestSuppHistoryGrid",
+      "fieldName": "SAN_TEST_SU_SHG",
+      "fieldType": 26,
+      "value": "KNALB~KNALB~KNALB~KNALB~KNALB~KNALB~KNALB~KNALB~KNALB",
+      "values": null
+    },
+    {
+      "caption": "SanTestCode",
+      "fieldName": "SAN_TEST_CO_CODE",
+      "fieldType": "SuppTypeCode",
+      "value": {
+        "id": 0,
+        "shortCode": "",
+        "desc": "",
+        "codeTable": "CLAIM_STATUS"
+      },
+      "values": null
+    },
+    {
+      "caption": "test\"hello\"1",
+      "fieldName": "TESTHELLO1_EID",
+      "fieldType": "SuppTypeEntity",
+      "value": {
+        "id": 0,
+        "shortCode": "",
+        "desc": "",
+        "codeTable": "DEPARTMENT"
+      },
+      "values": null
+    },
+    {
+      "caption": "SanTestDate",
+      "fieldName": "SAN_TEST_DA_DATE",
+      "fieldType": "SuppTypeDate",
+      "value": null,
+      "values": null
+    },
+    {
+      "caption": "SanTestEntity",
+      "fieldName": "SAN_TEST_EN_EID",
+      "fieldType": "SuppTypeEntity",
+      "value": {
+        "id": 0,
+        "desc": ""
+      },
+      "values": null
+    },
+    {
+      "caption": "SanTestCheckbox",
+      "fieldName": "SAN_TEST_CH_FLAG",
+      "fieldType": "SuppTypeCheckBox",
+      "value": false,
+      "values": null
+    },
+    {
+      "caption": "SanTestMultiTextNCodes",
+      "fieldName": "SAN_TEST_MU_TXCD",
+      "fieldType": "SuppTypeMemo",
+      "value": null,
+      "values": null
+    },
+    {
+      "caption": "SanTestClaimNoLookup",
+      "fieldName": "SAN_TEST_CL_TEXT",
+      "fieldType": "SuppTypeClaimLookup",
+      "value": {
+        "id": 0,
+        "desc": ""
+      },
+      "values": null
+    },
+    {
+      "caption": "testevent\"s1'test1",
+      "fieldName": "TESTEVENTS1_TEXT",
+      "fieldType": "SuppTypeText",
+      "value": null,
+      "values": null
+    },
+    {
+      "caption": "SanTestCurrency",
+      "fieldName": "SAN_TEST_CU_AMT",
+      "fieldType": "SuppTypeCurrency",
+      "value": 0,
+      "values": null
+    },
+    {
+      "caption": "vaish supplemental history grid",
+      "fieldName": "VAISH_SUPPL_SHG",
+      "fieldType": 26,
+      "value": "KNALB~KNALB~KNALB~KNALB~KNALB",
+      "values": null
+    },
+    {
+      "caption": "SanTestMultiCode",
+      "fieldName": "SAN_TEST_MU",
+      "fieldType": "SuppTypeMultiCode",
+      "value": null,
+      "values": []
+    },
+    {
+      "caption": "SanTestVehicleLookup",
+      "fieldName": "SAN_TEST2_V_TEXT",
+      "fieldType": "SuppTypeVehicleLookup",
+      "value": null,
+      "values": null
+    },
+    {
+      "caption": "SanTestTime",
+      "fieldName": "SAN_TEST_TI_TIME",
+      "fieldType": "SuppTypeTime",
+      "value": null,
+      "values": null
+    },
+    {
+      "caption": "event number lookup",
+      "fieldName": "EVENT_NUMBE_TEXT",
+      "fieldType": "SuppTypeEventLookup",
+      "value": {
+        "id": 0,
+        "desc": ""
+      },
+      "values": null
+    },
+    {
+      "caption": "multi entity field",
+      "fieldName": "MULTI_ENTIT",
+      "fieldType": "SuppTypeMultiEntity",
+      "value": null,
+      "values": []
+    },
+    {
+      "caption": "testeventcod\"e1",
+      "fieldName": "TESTEVENTCO_CODE",
+      "fieldType": "SuppTypeCode",
+      "value": {
+        "id": 0,
+        "shortCode": "",
+        "desc": "",
+        "codeTable": "CLAIM_STATUS"
+      },
+      "values": null
+    },
+    {
+      "caption": "test\"hello\"test\"hello\"new",
+      "fieldName": "TEST_EID",
+      "fieldType": "SuppTypeEntity",
+      "value": {
+        "id": 0,
+        "shortCode": "",
+        "desc": "",
+        "codeTable": "DEPARTMENT"
+      },
+      "values": null
+    },
+    {
+      "caption": "new\"test\"data",
+      "fieldName": "CHECK_THIS_EID",
+      "fieldType": "SuppTypeEntity",
+      "value": {
+        "id": 0,
+        "shortCode": "",
+        "desc": "",
+        "codeTable": "DEPARTMENT"
+      },
+      "values": null
+    },
+    {
+      "caption": "test\"data\"",
+      "fieldName": "USER_TEST_EID",
+      "fieldType": "SuppTypeEntity",
+      "value": {
+        "id": 0,
+        "shortCode": "",
+        "desc": "",
+        "codeTable": "DEPARTMENT"
+      },
+      "values": null
+    },
+    {
+      "caption": "june7Multientity",
+      "fieldName": "JUNE7MULTIE",
+      "fieldType": "SuppTypeMultiEntity",
+      "value": null,
+      "values": []
+    },
+    {
+      "caption": "jun6",
+      "fieldName": "JUN6",
+      "fieldType": "SuppTypeMultiEntity",
+      "value": null,
+      "values": []
+    },
+    {
+      "caption": "ClaimType",
+      "fieldName": "CLAIMTYPE",
+      "fieldType": "SuppTypeMultiCode",
+      "value": null,
+      "values": []
+    },
+    {
+      "caption": "SanTestFreeText",
+      "fieldName": "SAN_TEST_FR_MEMO",
+      "fieldType": "SuppTypeFreeText",
+      "value": null,
+      "values": null
+    },
+    {
+      "caption": "eno\"tes1",
+      "fieldName": "ENOTEST1_NUM",
+      "fieldType": "SuppTypeNumber",
+      "value": 0,
+      "values": null
+    },
+    {
+      "caption": "SanTestState",
+      "fieldName": "SAN_TEST_ST_STATE",
+      "fieldType": "SuppTypeState",
+      "value": {
+        "id": 0,
+        "shortCode": "",
+        "desc": "",
+        "codeTable": "STATES"
+      },
+      "values": null
+    }
+  ],
+  "dttmRcdLastUpd": "20171109134939",
+  "links": [
+    {
+      "href": "http://ec2-54-149-179-86.us-west-2.compute.amazonaws.com/RiskmasterAPI/events/event",
+      "rel": "save event",
+      "method": "PUT",
+      "recordId": 0
+    },
+    {
+      "href": "http://ec2-54-149-179-86.us-west-2.compute.amazonaws.com/RiskmasterAPI/events/event",
+      "rel": "update event view",
+      "method": "PATCH",
+      "recordId": 0
+    },
+    {
+      "href": "http://ec2-54-149-179-86.us-west-2.compute.amazonaws.com/RiskmasterAPI/events/7845",
+      "rel": "delete event",
+      "method": "DELETE",
+      "recordId": 0
+    },
+    {
+      "href": "http://ec2-54-149-179-86.us-west-2.compute.amazonaws.com/RiskmasterAPI/events/7845/eventintervention?showMore=True",
+      "rel": "eventintervention",
+      "method": "GET",
+      "recordId": 7845
+    },
+    {
+      "href": "http://ec2-54-149-179-86.us-west-2.compute.amazonaws.com/RiskmasterAPI/events/7845/osha/7845",
+      "rel": "associated-osha",
+      "method": "GET",
+      "recordId": 7845
+    },
+    {
+      "href": "http://ec2-54-149-179-86.us-west-2.compute.amazonaws.com/RiskmasterAPI/events/7845/medwatch/7845",
+      "rel": "associated-medwatch",
+      "method": "GET",
+      "recordId": 7845
+    },
+    {
+      "href": "http://ec2-54-149-179-86.us-west-2.compute.amazonaws.com/RiskmasterAPI/events/7845/qualityreviews/qmphysadvreview/7845",
+      "rel": "qmphysadvreview",
+      "method": "GET",
+      "recordId": 7845
+    },
+    {
+      "href": "http://ec2-54-149-179-86.us-west-2.compute.amazonaws.com/RiskmasterAPI/events/7845/qualityreviews/qmcommdeptreview/7845",
+      "rel": "qmcommdeptreview",
+      "method": "GET",
+      "recordId": 7845
+    },
+    {
+      "href": "http://ec2-54-149-179-86.us-west-2.compute.amazonaws.com/RiskmasterAPI/events/7845/qualityreviews/qmqualmgrreview/7845",
+      "rel": "qmqualmgrreview",
+      "method": "GET",
+      "recordId": 7845
+    },
+    {
+      "href": "http://ec2-54-149-179-86.us-west-2.compute.amazonaws.com/RiskmasterAPI/events/7845/qualityreviews/qminitialreview/7845",
+      "rel": "qminitialreview",
+      "method": "GET",
+      "recordId": 7845
+    },
+    {
+      "href": "/RiskmasterAPI/events/7845/fallinfo/-1",
+      "rel": "fallinfo",
+      "method": "GET",
+      "recordId": -1
+    },
+    {
+      "href": "/RiskmasterAPI/events/7845/sentinel/-1",
+      "rel": "sentinel",
+      "method": "GET",
+      "recordId": -1
+    },
+    {
+      "href": "/RiskmasterAPI/events/7845",
+      "rel": "self",
+      "method": "GET",
+      "recordId": 7845
+    },
+    {
+      "href": "/RiskmasterAPI/events/7845?source=recordsummary",
+      "rel": "recordsummary",
+      "method": "GET",
+      "recordId": 7845
+    }
+  ],
+  "associatedEntities": [
+    {
+      "href": "/RiskmasterAPI/events/7845/claims?displayCount=3",
+      "rel": "associated-claim",
+      "method": "GET",
+      "recordId": 0
+    },
+    {
+      "href": "/RiskmasterAPI/events/7845/personinvolvedlist?displayCount=3",
+      "rel": "associated-personinvolvedlist",
+      "method": "GET",
+      "recordId": 0
+    },
+    {
+      "href": "/RiskmasterAPI/events/7845/eventdatedtexts?displayCount=3",
+      "rel": "associated-eventdatedtext",
+      "method": "GET",
+      "recordId": 0
+    }
+  ],
+  "sysExData": {
+    "eventCat": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": ""
+    },
+    "subTitle": " [007845 *  * - ]",
+    "allCodes": "13,",
+    "closeDiary": "false",
+    "containsOpenDiaries": false,
+    "isAnyClaimHavePolicy": "False",
+    "eventOnPremiseChecked": "false",
+    "oH_FACILITY_EID": "0",
+    "oH_LOCATION_EID": "0",
+    "oH_DIVISION_EID": "0",
+    "oH_REGION_EID": "0",
+    "oH_OPERATION_EID": "0",
+    "oH_COMPANY_EID": "0",
+    "oH_CLIENT_EID": "0",
+    "useLegacyComments": "False",
+    "hdnselectedpermsusers": "0",
+    "psO_EVENT_TYPES": "",
+    "evtPsoRowId": "0",
+    "patPsoRowId": "0",
+    "isAutoPopulateDpt": "0",
+    "sysFormIdName": "eventId",
+    "sysSid": "11000"
+  }
+}
