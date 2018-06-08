@@ -1,0 +1,558 @@
+{
+  "eventId": 0,
+  "countyOfInjury": "",
+  "eventNumber": "",
+  "eventTypeCode": {
+    "id": 0,
+    "shortCode": "",
+    "desc": "",
+    "codeTable": "EVENT_TYPE"
+  },
+  "eventStatusCode": {
+    "id": 0,
+    "shortCode": "",
+    "desc": "",
+    "codeTable": "EVENT_STATUS"
+  },
+  "eventIndCode": {
+    "id": 0,
+    "shortCode": "",
+    "desc": "",
+    "codeTable": "EVENT_INDICATOR"
+  },
+  "eventDescription": "Initial Claim Report.",
+  "briefDesc": "",
+  "deptEid": {
+    "id": 0,
+    "shortCode": "",
+    "desc": "",
+    "codeTable": "DEPARTMENT"
+  },
+  "deptInvolvedEid": {
+    "id": 0,
+    "shortCode": "",
+    "desc": "",
+    "codeTable": "DEPARTMENT"
+  },
+  "addr1": "135 W Front St",
+  "addr2": "",
+  "addr3": "",
+  "addr4": "",
+  "city": "Sunset",
+  "stateId": {
+    "id": 0,
+    "shortCode": "",
+    "desc": "",
+    "codeTable": "STATES"
+  },
+  "zipCode": "35211",
+  "countryCode": {
+    "id": 70,
+    "shortCode": "USA",
+    "desc": "United States",
+    "codeTable": "COUNTRY"
+  },
+  "locationAreaDesc": "135 E Front St, Sunset TX 76270",
+  "primaryLocCode": {
+    "id": 0,
+    "shortCode": "",
+    "desc": "",
+    "codeTable": "PRIMARY_LOCATION"
+  },
+  "locationTypeCode": {
+    "id": 0,
+    "shortCode": "",
+    "desc": "",
+    "codeTable": "LOCATION_TYPE"
+  },
+  "onPremiseFlag": false,
+  "noOfInjuries": 0,
+  "noOfFatalities": 0,
+  "causeCode": {
+    "id": 0,
+    "shortCode": "",
+    "desc": "",
+    "codeTable": "CAUSE_CODE"
+  },
+  "dateOfEvent": "11/08/2017",
+  "timeOfEvent": "1:00 PM",
+  "dateReported": "11/09/2017",
+  "timeReported": "12:00 AM",
+  "rptdByEid": {
+    "id": 0,
+    "desc": ""
+  },
+  "dateRptdToRm": "",
+  "dateToFollowUp": "",
+  "accountId": 0,
+  "datePhysAdvised": "",
+  "timePhysAdvised": "",
+  "treatmentGiven": false,
+  "releaseSigned": false,
+  "deptHeadAdvised": false,
+  "physNotes": "",
+  "dateCarrierNotif": "",
+  "injuryFromDate": "",
+  "injuryToDate": "",
+  "eventDescription_HTMLComments": "Initial Claim Report.",
+  "locationAreaDesc_HTMLComments": "135 E Front St, Sunset TX 35211",
+  "requireIntervention": false,
+  "confRecFlag": false,
+  "catastropheNumber": {
+    "id": 0,
+    "shortCode": "",
+    "desc": "",
+    "codeTable": "CATASTROPHE_NUMBER"
+  },
+  "eventXAction": [
+    {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": ""
+    }
+  ],
+  "eventXOutcome": [
+    {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": ""
+    }
+  ],
+  "eventQM": {
+    "eventId": 0,
+    "medCaseNumber": "",
+    "medFileCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_MED_FILES"
+    },
+    "medIndCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_MED_INDICATORS"
+    },
+    "irStatusCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_STATUS"
+    },
+    "irReviewerUid": [
+      {
+        "groupID": 0,
+        "userID": 0,
+        "name": "",
+        "type": ""
+      }
+    ],
+    "irReviewerName": "",
+    "irDetermCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_DETERMINATION"
+    },
+    "irReviewDate": "",
+    "irFollowUpDate": "",
+    "irComments": "",
+    "irRecActions": "",
+    "paStatusCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_STATUS"
+    },
+    "paReviewerEid": {
+      "id": 0,
+      "desc": ""
+    },
+    "paDetermCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_DETERMINATION"
+    },
+    "paReviewDate": "",
+    "paFollowUpDate": "",
+    "paComments": "",
+    "paRecActions": "",
+    "cdStatusCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_STATUS"
+    },
+    "cdCommitteeCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_COMMITTEES"
+    },
+    "cdDeptEid": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "DEPARTMENT"
+    },
+    "cdDetermCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_DETERMINATION"
+    },
+    "cdReviewDate": "",
+    "cdFollowUpDate": "",
+    "cdComments": "",
+    "cdRecActions": "",
+    "qmStatusCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_STATUS"
+    },
+    "qmReviewerUid": [
+      {
+        "groupID": 0,
+        "userID": 0,
+        "name": "",
+        "type": ""
+      }
+    ],
+    "qmReviewerName": "",
+    "qmDetermCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "QM_DETERMINATION"
+    },
+    "qmReviewDate": "",
+    "qmCloseDate": "",
+    "qmComments": "",
+    "qmRecActions": "",
+    "supplementals":null,
+    "dttmRcdLastUpd": "",
+    "links": [],
+    "associatedEntities": [],
+    "sysExData": null
+  },
+  "reporterEntity": {
+    "businessTypeCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "BUSINESS_TYPE"
+    },
+    "county": "",
+    "natureOfBusiness": "",
+    "sicCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "SIC_CODE"
+    },
+    "sicCodeDesc": "",
+    "wcFillingNumber": "",
+    "entityId": 0,
+    "firstName": "",
+    "alsoKnownAs": "",
+    "abbreviation": "",
+    "costCenterCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "COST_CENTER"
+    },
+    "addr1": "",
+    "addr2": "",
+    "city": "",
+    "countryCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "COUNTRY"
+    },
+    "stateId": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "STATES"
+    },
+    "zipCode": "",
+    "parentEid": {
+      "id": 0,
+      "desc": ""
+    },
+    "taxId": "",
+    "contact": "",
+    "comments": "",
+    "emailTypeCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "EMAIL_TYPE"
+    },
+    "emailAddress": "",
+    "sexCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "SEX_CODE"
+    },
+    "birthDate": "",
+    "phone1": "",
+    "phone2": "",
+    "faxNumber": "",
+    "effStartDate": "",
+    "effEndDate": "",
+    "parent1099EID": {
+      "id": 0,
+      "desc": ""
+    },
+    "entity1099Reportable": false,
+    "middleName": "",
+    "title": "",
+    "naicsCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "NAICS_CODES"
+    },
+    "freezePayments": false,
+    "organizationType": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "ORGANIZATION_TYPE"
+    },
+    "npiNumber": "",
+    "timeZoneCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "TIME_ZONE_CODES"
+    },
+    "prefix": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "ENTITY_PREFIX"
+    },
+    "suffixCommon": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "ENTITY_SUFFIX"
+    },
+    "suffixLegal": "",
+    "legalName": "",
+    "referenceNumber": "",
+    "legacyUniqueIdentifier": "",
+    "effectiveDate": "",
+    "expirationDate": "",
+    "adjusterEId": {
+      "id": 0,
+      "desc": ""
+    },
+    "idType": 0,
+    "lastName": "",
+    "addr3": "",
+    "addr4": "",
+    "deletedFlag": false,
+    "triggerDateField": "",
+    "overrideOfacCheck": false,
+    "rmUserId": [
+      {
+        "groupID": 0,
+        "userID": 0,
+        "name": "",
+        "type": ""
+      }
+    ],
+    "timeZoneTracking": false,
+    "emailPassword": "",
+    "hbrFeeLines": 0,
+    "hbrAmt": 0,
+    "mbrFeeLines": 0,
+    "mbrAmt": 0,
+    "mmseatinEditFlag": false,
+    "autoDiscFlg": false,
+    "autoDiscount": 0,
+    "htmlComments": "",
+    "rejectReasonText": "",
+    "rejectReasonText_HTMLComments": "",
+    "entityApprovalStatusCode": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "ENTITY_APPRV_REJ"
+    },
+    "currencyType": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "CURRENCY_TYPE"
+    },
+    "clientSequenceNumber": "",
+    "nameType": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "ENTITY_NAME_TYPE"
+    },
+    "ncciCarrierCode": "",
+    "dunsNumber": "",
+    "ausTetraNumber": "",
+    "experianBIN": "",
+    "hasAcceptedBankinginfo": null,
+    "combinedPayment": {
+      "combPayRowId": 0,
+      "entityId": {
+        "id": 0,
+        "desc": ""
+      },
+      "firstName": "",
+      "lastName": "",
+      "addr1": "",
+      "addr2": "",
+      "addr3": "",
+      "addr4": "",
+      "city": "",
+      "stateId": {
+        "id": 0,
+        "shortCode": "",
+        "desc": "",
+        "codeTable": ""
+      },
+      "zipCode": "",
+      "countryCode": {
+        "id": 0,
+        "shortCode": "",
+        "desc": "",
+        "codeTable": ""
+      },
+      "taxId": "",
+      "accountId": 0,
+      "subAccId": 0,
+      "paymentInterval": {
+        "id": 0,
+        "shortCode": "",
+        "desc": "",
+        "codeTable": ""
+      },
+      "startingOnDate": "",
+      "nextSchDate": "",
+      "nextPrintOverride": "",
+      "nextSchPrintDate": "",
+      "lastDayflag": true,
+      "stopDate": "",
+      "stopFlag": true,
+      "combPmtCurrencyType": {
+        "id": 0,
+        "shortCode": "",
+        "desc": "",
+        "codeTable": ""
+      },
+      "adjustPrintDatesFlag": true,
+      "supplementals":null,
+      "dttmRcdLastUpd": "",
+      "links": [
+        {
+          "href": "",
+          "rel": "",
+          "method": "",
+          "recordId": 0
+        }
+      ],
+      "associatedEntities": [
+        {
+          "href": "",
+          "rel": "",
+          "method": "",
+          "recordId": 0
+        }
+      ],
+      "sysExData": {}
+    },
+    "instructions": {
+      "entityId": 0,
+      "entInstrText": "",
+      "supplementals": null,
+      "dttmRcdLastUpd": "",
+      "links": [
+        {
+          "href": "",
+          "rel": "",
+          "method": "",
+          "recordId": 0
+        }
+      ],
+      "associatedEntities": [
+        {
+          "href": "",
+          "rel": "",
+          "method": "",
+          "recordId": 0
+        }
+      ],
+      "sysExData": {}
+    },
+    "useEntityRole": true,
+    "gstNumber": "",
+    "gstStatus": {
+      "id": 0,
+      "shortCode": "",
+      "desc": "",
+      "codeTable": "GST_STATUS"
+    },
+    "gstRegistered": false,
+    "supplementals": [
+      {
+        "caption": "Claim Index Bureau Number",
+        "fieldName": "INDEX_BUREAU_NUMB",
+        "fieldType": "SuppTypeText",
+        "value": null,
+        "values": null
+      }
+    ],
+      "dttmRcdLastUpd": "",
+      "links":[
+        {"href": "",
+        "rel": "",
+        "method": "",
+        "recordId": 0
+      }
+    ],
+    "associatedEntities": [
+      {
+        "href": "",
+        "rel": "",
+        "method": "",
+        "recordId": 0
+      }
+    ],
+    "sysExData": {}
+  },
+  "supplementals": null,
+  "dttmRcdLastUpd": "",
+  "links": [
+    {
+      "href": "",
+      "rel": "",
+      "method": "",
+      "recordId": 0
+    }
+  ],
+  "associatedEntities": [
+    {
+      "href": "",
+      "rel": "",
+      "method": "",
+      "recordId": 0
+    }
+  ],
+  "sysExData": {"closeDiary":"false"}
+}

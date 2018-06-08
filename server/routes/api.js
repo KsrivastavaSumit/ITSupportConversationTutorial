@@ -15,6 +15,9 @@
  */
 const express = require('express');
 const conversation = require('./features/conversation');
+const claim = require('./features/claim');
+var  claimmodel = require('../model/claim.json');
+
 //var slacklisterner = require('./features/slack-listener');
 
 /** Export the APIs for the front end */
@@ -46,4 +49,12 @@ module.exports = function(app,config) {
         }
   });
 
+  // Support REST call to rmA
+  app.post('/api/claim',function(req,res){
+      if(!req.body){
+        res.status(400).send({error:'no post body'});
+      } else {
+            claim.createFNOLinSOR(config,claimmodel,req,res);
+        }
+      });
 } // exports

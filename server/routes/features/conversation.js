@@ -113,6 +113,7 @@ var sendMessage = function(config,req,wkid,res,next){
                     next(config,res,response);
               });
           } else {
+              console.log("lookslike no error");
               next(config,res,response);
           }
         }

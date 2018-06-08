@@ -33,7 +33,11 @@
                       <img src='assets/images/watson-globe.png' style='width:50px'>
                     </div>
                   </div>
-                  <div class="{{p.direction+'-text'}}" [innerHTML]="p.text">
+                  <li *ngIf="isLoading">
+                      <div [ngBusy]="busy"></div> wait...
+                      <loaders-css [loader]="'square-spin'" [loaderClass]="'my-loader'"></loaders-css>
+                  </li>
+                  <div *ngIf="responseAvailable() && isLoading==false"  class="{{p.direction+'-text'}}" [innerHTML]="p.text">
                   </div>
                 </div>
             </div>

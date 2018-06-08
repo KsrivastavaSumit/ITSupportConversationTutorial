@@ -1,20 +1,29 @@
 {
     "conversation" :{
-      "version":"2017-02-03",
-      "username":"",
-      "password":"",
-      "workspace1":"",
-      "workspace2":"",
-      "conversationId":"",
-      "usePersistence": true
+      "version" : "v1",
+      "versionDate":"2018-02-16",
+      "username":"username",
+      "password":"pasword",
+      "workspace1":"wspcid",
+      "conversationId":"samplermAConversations",
+      "workspace2":"1dca2a14-c25e-454f-9a0e-53605348bf10",
+      "workspace3":"1dca2a14-c25e-454f-9a0e-53605348bf10",
+      "usePersistence": false
+    },
+    "SOR":{
+      "systemname":"claimsystemname",
+      "claimapiurl":"restcalltoclaim creation",
+      "claimtoken":"jwt token to accompany rest call"
     },
     "bpmoc" :{
-      "servername":"",
-      "processname":"",
-      "basicAuth":""
+      "serverName":"vhost001.bpm.ibmcloud.com",
+      "processName":"SOBD/SOAPStart.tws",
+      "basicAuth":"Y29nbml0aXZlYnBtZW1haWxAZ21haWwuY29tOmNvZ25pdGl2ZQ=="
     },
     "dbCredentials" : {
-            "url": "https://...-bluemix:...-bluemix.cloudant.com"
+      "url": "your db url where you would like to save conversations"
     },
-    "debug":true
+    "debug":true,
+    "port": 3001,
+    "version": "v0.0.7"
 }

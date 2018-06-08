@@ -1,16 +1,20 @@
 import {Component, AfterViewChecked, ElementRef, ViewChild, OnInit} from '@angular/core';
 import { ConversationService }  from './conversation.service';
+import { ClaimService }  from '../claim/claim.service';
 import { Sentence } from "./Sentence";
 import {ActivatedRoute, Params} from '@angular/router';
 
 @Component({
     moduleId: module.id,
     selector: 'conversation',
-    styleUrls:['conversation.css'],
+    styleUrls:['conversation.css','loaders.css'],   //'loaders.css'
     templateUrl:'conversation.html'
   })
 
 export class ConversationComponent implements OnInit, AfterViewChecked {
+  private loadingComplete = false;
+  private isLoading = true ;
+
   currentDialog : Sentence[]=[];
   context={'type':'base'}; // used to keep the Conversation context
   message:string;
@@ -18,11 +22,13 @@ export class ConversationComponent implements OnInit, AfterViewChecked {
   /**
   When creating a conversation component call Watson to get a greetings message as defined in the Dialog. This is more user friendly.
   */
-  constructor(private convService : ConversationService, private route: ActivatedRoute){
+  constructor(private convService : ConversationService, private claimService : ClaimService, private route: ActivatedRoute){
     // depending of the url parameters the layout can be simple or more demo oriented with instruction in html
     this.type=this.route.snapshot.params['type'];
     // Uncomment this line if you do not have a conversation_start trigger in a node of your dialog
-    this.callConversationBFF("Hello");
+    this.isLoading = true;
+    this.loadingComplete = false;
+    this.callConversationBFF(''); // sending empty to get a welcome
   }
 
   @ViewChild('scrollMe') private myScrollContainer: ElementRef;
@@ -52,7 +58,34 @@ export class ConversationComponent implements OnInit, AfterViewChecked {
         this.context=data.context;
         let s:Sentence = new Sentence();
         s.direction="from-watson";
-        s.text=data.output.text[0];
+        //need to call an fnolService
+        if(data.context.Action){
+              if (data.context.Action == "createFNOLinSOR")
+              {
+                  this.claimService.submitClaimInfo(this.context).subscribe(
+                      data1=>{
+                          this.isLoading = false;
+                          this.loadingComplete = true;
+                          s.text ="Here is your reference for future communication: " + data1.eventNumber;
+                      },
+                      error => {
+                        this.isLoading = false;
+                        this.loadingComplete = true;
+                        s.text = "Sorry, the Third Party claim service could not create the claim at this time.";
+                        }
+                  )
+              }
+              else if (data.context.Action === "click") {
+                  this.isLoading = false;
+                  this.loadingComplete = true;
+                  s.text=data.output.text.join() + "<a class=\"btn btn-primary\" href=\""+data.context.url+"\">Here</a>"
+              }
+        }
+        else{
+          this.isLoading = false;
+          this.loadingComplete = true;
+          s.text=data.output.text.join();
+        }
         this.currentDialog.push(s)
       },
       error => {
@@ -61,6 +94,9 @@ export class ConversationComponent implements OnInit, AfterViewChecked {
     )
   }
 
+   responseAvailable(){
+       return (!this.isLoading && this.loadingComplete);
+   }
   // method called from html button
   submit(){
     let obj:Sentence = new Sentence();
