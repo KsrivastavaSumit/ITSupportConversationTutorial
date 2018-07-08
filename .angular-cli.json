@@ -19,7 +19,9 @@
       "testTsconfig": "tsconfig.spec.json",
       "prefix": "app",
       "styles": [
-        "styles.css"
+        "styles.css",
+        "../node_modules/loaders.css/loaders.min.css",
+        "../node_modules/angular2-busy/build/style/busy.css"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
