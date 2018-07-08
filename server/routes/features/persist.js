@@ -21,6 +21,7 @@ Author: IBM - Jerome Boyer
 
 
 module.exports=  {
+
   saveConversation : function(config,conv,next){
     var cloudant = require('cloudant')(config.dbCredentials.url);
     var db = cloudant.use('wcsdb');

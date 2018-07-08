@@ -4,6 +4,7 @@ import { ClaimService }  from '../claim/claim.service';
 import { Sentence } from "./Sentence";
 import {ActivatedRoute, Params} from '@angular/router';
 
+
 @Component({
     moduleId: module.id,
     selector: 'conversation',
@@ -16,7 +17,7 @@ export class ConversationComponent implements OnInit, AfterViewChecked {
   private isLoading = true ;
 
   currentDialog : Sentence[]=[];
-  context={'type':'base'}; // used to keep the Conversation context
+  context={'type':'base','UTCOffset': 0}; // used to keep the Conversation context
   message:string;
   type:string = "base";
   /**
@@ -25,10 +26,14 @@ export class ConversationComponent implements OnInit, AfterViewChecked {
   constructor(private convService : ConversationService, private claimService : ClaimService, private route: ActivatedRoute){
     // depending of the url parameters the layout can be simple or more demo oriented with instruction in html
     this.type=this.route.snapshot.params['type'];
-    // Uncomment this line if you do not have a conversation_start trigger in a node of your dialog
     this.isLoading = true;
     this.loadingComplete = false;
-    this.callConversationBFF(''); // sending empty to get a welcome
+    setTimeout(()=> {
+       this.callConversationBFF('');
+     }, 4000);
+
+     // send blank to initiate conversation from Wantson side
+    //this.callConversationBFF(''); // sending empty to get a welcome
   }
 
   @ViewChild('scrollMe') private myScrollContainer: ElementRef;
@@ -47,12 +52,13 @@ export class ConversationComponent implements OnInit, AfterViewChecked {
       } catch(err) { }
   }
 
-
   // variable used for the input field in html page to get user query
   queryString=""
 
   callConversationBFF(msg:string) {
     this.context['type']=this.type; // inject the type of caller so the BFF can call different conversation workspace
+    this.isLoading = true;
+    this.loadingComplete = false;
     this.convService.submitMessage(msg,this.context).subscribe(
       data => {
         this.context=data.context;
@@ -62,36 +68,48 @@ export class ConversationComponent implements OnInit, AfterViewChecked {
         if(data.context.Action){
               if (data.context.Action == "createFNOLinSOR")
               {
+                  this.context.UTCOffset = new Date().getTimezoneOffset();
+                  alert(this.context.UTCOffset);
                   this.claimService.submitClaimInfo(this.context).subscribe(
                       data1=>{
+                          s.text ="Here is your reference for future communication: <b>" + data1.eventNumber +"</b>. Thank you for giving us an opportunity to serve.";
                           this.isLoading = false;
                           this.loadingComplete = true;
-                          s.text ="Here is your reference for future communication: " + data1.eventNumber;
+                          this.currentDialog.push(s);
+                          this.claimService.submitChatInfo(this.currentDialog, data1.eventId).subscribe(
+                            data2=>{
+                            },
+                            error=>
+                            {
+                                alert("Recording could not be sent");
+                            }
+                          );
                       },
                       error => {
+                        s.text = "Sorry, the Third Party claim service could not create the claim at this time.";
                         this.isLoading = false;
                         this.loadingComplete = true;
-                        s.text = "Sorry, the Third Party claim service could not create the claim at this time.";
-                        }
-                  )
+                      },
+                  );
               }
               else if (data.context.Action === "click") {
-                  this.isLoading = false;
-                  this.loadingComplete = true;
-                  s.text=data.output.text.join() + "<a class=\"btn btn-primary\" href=\""+data.context.url+"\">Here</a>"
+                  s.text=data.output.text.join() + "<a class=\"btn btn-primary\" href=\""+data.context.url+"\">Here</a>";
+                  this.currentDialog.push(s);
               }
         }
         else{
+          s.text=data.output.text.join();
           this.isLoading = false;
           this.loadingComplete = true;
-          s.text=data.output.text.join();
+          this.currentDialog.push(s);
         }
-        this.currentDialog.push(s)
       },
       error => {
-        return "Error occurs in conversation processing"
-        }
-    )
+        this.isLoading = false;
+        this.loadingComplete = true;
+        return "Error occurs in conversation processing";
+      },
+    );
   }
 
    responseAvailable(){
@@ -103,8 +121,17 @@ export class ConversationComponent implements OnInit, AfterViewChecked {
     obj.direction="to-watson";
     obj.text=this.queryString;
     this.currentDialog.push(obj);
+
+    this.isLoading = true;
+    this.loadingComplete = false;
     this.callConversationBFF(this.queryString);
     this.queryString="";
+  }
+
+  clear(){
+    this.currentDialog.length = 0;
+    this.context={'type':'base','UTCOffset':0};
+    this.callConversationBFF('');
   }
 
   // instead to click on button if user hits enter/return key
