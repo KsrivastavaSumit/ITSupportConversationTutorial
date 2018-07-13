@@ -1,3 +1,9 @@
+<style>
+.loader .my-loader {
+    background-color: #000;
+    color: #0000;
+}
+</style>
 <div class="collapse navbar-collapse" id="main-navbar">
   <ul class="nav navbar-nav">
       <li class=""><a [routerLink]="['/']">Home</a></li>
@@ -12,11 +18,12 @@
         <li>Verification questions like Zipcode, Policy information etc</li>
       </ul>
     <br/>
-    <p>Once claim is filed the claim can be looked up at <a href="https://vhost001.bpm.ibmcloud.com">DXC Claims on cloud</a></p>
+    <p>Once claim is filed the claim can be looked up at <a href="http://ec2-54-149-179-86.us-west-2.compute.amazonaws.com/riskmasterUX/#/dashboard">DXC Claims on cloud</a></p>
     <ul>
-      <li>On a filed notification several actions can be taken.</li>
-      <li>YOu can start adjudicating the claim or seek more information</li>
+      <li>On a filed notification several actions can be taken by an Insurance company.</li>
+      <li>For example: Once can start adjudicating the claim. One may also seek more information using various channels.  DXC's Self-serve offering is one of the ways of collection information.</li>
     </ul>
+
     <div *ngIf="isLoading">
       <loaders-css [loader]="'square-spin'" [loaderClass]="'my-loader'">Pls wait...</loaders-css>
     </div>

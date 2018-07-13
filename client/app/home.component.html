@@ -1,12 +1,38 @@
-<link rel="stylesheet" href="node_modules/loaders.css/loaders.min.css">
-<div class="row">
-  <h3>Welcome to the DXC Watson Conversation Broker Demo</h3>
-  <p>This user interface is used to demonstrated the conversations broker in action, used to orchestrate Watson Conversation Service with other backend services.</p>
-    <p>For more information about code and content see the repository in github.com <a href="https://github.com/ibm-cloud-architecture/refarch-cognitive-conversation-broker">IBM Cloud Architecture</a></p>
-    <p>For a deep dive tutorial on how the IT support conversation is done see the <a href="https://www.ibm.com/cloud/garage/tutorials/watson_conversation_support">garage method site</a></p>
-  <div class="col-md-4 roundRect" style="box-shadow: 5px 5px 2px #10d1d1; border-color: #10d1d1;">
-        <h2>DXC FNOL Bot</h2>
-        <p>Start a simple DXC Claims support conversation for starting a FIRST Notice of Loss  - for demonstration of the broker's capabilities</p>
-        <p><button (click)="conversation()" class="btn">Ask DXC Insurance Claims</button></p>
-  </div>
+<div class="headinginner inner flex flex-3">
+ <p style="font-size: 12px;">
+   <p>This user interface is used to demonstrate the conversations broker in action, used to orchestrate Watson Conversation Service with Claims application. The broker can communicate with other backend servcies as well.
+   For more information about code and content see the repository in github.com <a href="https://github.com/KsrivastavaSumit/ITSupportConversationTutorial">DXC Claims on IBM Cloud Reference Architecture </a>
 </div>
+<section id="one" class="wrapper">
+ <div class="inner flex flex-3">
+     <div class="flex-item left" style="position: relative; top: -101px;">
+         <div>
+             <h3>DXC FNOL Bot</h3>
+             <p>Engage DXC Claims support bot to record a First <br> Notice of Loss or a Claim with Insurance company.</p>
+             <p><button (click)="conversation()" class="btn">Ask DXC Insurance Claims</button></p>
+         </div>
+
+     </div>
+     <div class="flex-item image fit round">
+         <img src="assets/images/pic01.jpg" alt="">
+     </div>
+     <div class="flex-item right">
+         <div>
+             <h3>DXC Claims</h3>
+             <p>
+                 RISKMASTER Accelerator
+             </p>
+             <p>
+                 <button class="btn">Claim Administration</button></p>
+         </div>
+         <div>
+             <h3>Knowledge Advisor</h3>
+             <p>
+                 Explore Claims repository
+             </p>
+             <p>
+                 <button class="btn">Advise me</button></p>
+         </div>
+     </div>
+ </div>
+</section>
