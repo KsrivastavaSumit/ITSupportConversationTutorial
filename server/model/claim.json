@@ -34,25 +34,25 @@
     "desc": "",
     "codeTable": "DEPARTMENT"
   },
-  "addr1": "135 W Front St",
+  "addr1": "",
   "addr2": "",
   "addr3": "",
   "addr4": "",
-  "city": "Sunset",
+  "city": "",
   "stateId": {
     "id": 0,
     "shortCode": "",
     "desc": "",
     "codeTable": "STATES"
   },
-  "zipCode": "35211",
+  "zipCode": "",
   "countryCode": {
     "id": 70,
     "shortCode": "USA",
     "desc": "United States",
     "codeTable": "COUNTRY"
   },
-  "locationAreaDesc": "135 E Front St, Sunset TX 76270",
+  "locationAreaDesc": "",
   "primaryLocCode": {
     "id": 0,
     "shortCode": "",
@@ -94,8 +94,8 @@
   "dateCarrierNotif": "",
   "injuryFromDate": "",
   "injuryToDate": "",
-  "eventDescription_HTMLComments": "Initial Claim Report.",
-  "locationAreaDesc_HTMLComments": "135 E Front St, Sunset TX 35211",
+  "eventDescription_HTMLComments": "Initial Claim Report - IBM Watson.",
+  "locationAreaDesc_HTMLComments": "Initial Claim Report - IBM Watson.",
   "requireIntervention": false,
   "confRecFlag": false,
   "catastropheNumber": {

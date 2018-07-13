@@ -69,7 +69,6 @@ export class ConversationComponent implements OnInit, AfterViewChecked {
               if (data.context.Action == "createFNOLinSOR")
               {
                   this.context.UTCOffset = new Date().getTimezoneOffset();
-                  alert(this.context.UTCOffset);
                   this.claimService.submitClaimInfo(this.context).subscribe(
                       data1=>{
                           s.text ="Here is your reference for future communication: <b>" + data1.eventNumber +"</b>. Thank you for giving us an opportunity to serve.";

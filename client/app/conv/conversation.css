@@ -1,7 +1,8 @@
+/*margin has been changed form 30 to 0 in container */
 .conversation-container {
   border-style: solid;
   max-width: 700px;
-  margin: 30px auto;
+  margin: 0px auto;
   border-width : 2px;
   border-radius: 8px;
   border-color: #blue;
@@ -26,11 +27,12 @@
   float: right;
   font-size: 40px;
 }
+/* a9ef1c*/
 .to-watson-text {
   padding: 0px 20px;
   border-radius: 20px;
   float: right;
-  background: #a9ef1c;
+  background: #8bc9ef;
   color:white;
   max-width: calc(100% - 60px);
 }
@@ -41,8 +43,9 @@
 .from-watson-icon {
   float: left;
 }
+/*#8bc9ef old color*/
 .from-watson-text {
-  background: #8bc9ef;
+  background: #000;
   color: white;
   padding: 15px 20px;
   border-radius: 20px;

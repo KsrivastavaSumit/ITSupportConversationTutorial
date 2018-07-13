@@ -6,7 +6,7 @@ Main page component to display access to the different demo features.
 
 @Component({
     selector: 'home',
-    styleUrls: ['./home.component.css'],
+    styleUrls: ['./home.component.css','./app.component.css'],
     templateUrl: './home.component.html'
   })
 
