@@ -25,7 +25,7 @@
 }
 .to-watson-icon {
   float: right;
-  font-size: 40px;
+  font-size: 22px;
 }
 /* a9ef1c*/
 .to-watson-text {
@@ -52,3 +52,5 @@
   float: left;
   max-width: calc(100% - 60px);
 }
+.square-spin>div {
+border:1px solid #555 !important;}

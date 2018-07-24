@@ -10,7 +10,7 @@
   </ul>
 </div>
 <div class='row'>
-  <div class='col-xs-4' *ngIf="type == 'base'">
+  <div class='col-xs-12 col-md-6 col-sm-12' *ngIf="type == 'base'">
     <p>Welcome to IBM Watson & DXC claims demo. You can record your claim by providing simple information like:</p>
       <ul>
         <li>You name</li>
@@ -24,11 +24,12 @@
       <li>For example: Once can start adjudicating the claim. One may also seek more information using various channels.  DXC's Self-serve offering is one of the ways of collection information.</li>
     </ul>
 
-    <div *ngIf="isLoading">
+ <!--   <div *ngIf="isLoading"> -->
+	<div>
       <loaders-css [loader]="'square-spin'" [loaderClass]="'my-loader'">Pls wait...</loaders-css>
     </div>
   </div>
-  <div class="col-xs-8">
+  <div class="col-xs-12 col-md-6 col-sm-12">
      <div class="conversation-container">
         <div #scrollMe  class="scrolling-box">
           <div *ngFor="let p of currentDialog">
