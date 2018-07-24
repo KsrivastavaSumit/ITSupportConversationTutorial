@@ -1,14 +1,26 @@
 {
+
+
+
+
     "conversation" :{
       "version" : "v1",
-      "versionDate":"2017-02-03",
-      "username":"291d9397-073f-46d9-b0d2-11b54e6ae533",
-      "password":"aDFBIIPYkQlD",
-      "workspace1":"1a3b01f3-4757-444d-a933-a1e648babfc1",
-      "conversationId":"CyanConversations",
-      "workspace2":"80b451cc-d4eb-43bf-a4ac-359599cd2405",
-      "workspace3":"6c5ba7ac-4925-4ab4-bbc6-03f05e539407",
+      "versionDate":"2018-02-16",
+      "username":"3566083f-ae01-4b88-9e49-69e55155ae22",
+      "password":"twcNvdh0pKng",
+      "workspace1":"1dca2a14-c25e-454f-9a0e-53605348bf10",
+      "conversationId":"samplermAConversations",
+      "workspace2":"1dca2a14-c25e-454f-9a0e-53605348bf10",
+      "workspace3":"1dca2a14-c25e-454f-9a0e-53605348bf10",
       "usePersistence": false
+    },
+    "SOR":{
+      "systemname":"rmA",
+      "servertimezone":"America/New_York",
+      "claimapiurl":"http://ec2-54-149-179-86.us-west-2.compute.amazonaws.com/RiskmasterAPI/events/event",
+      "attachmentapiurl":"http://ec2-54-149-179-86.us-west-2.compute.amazonaws.com/RiskmasterAPI/attachments",
+      "uploadapiurl":"http://ec2-54-149-179-86.us-west-2.compute.amazonaws.com/RiskmasterAPI/upload",
+      "claimtoken":"1ec4163b94294df29957cff829e6ab09766b07b5e9f9f99d8ad41062c95db69502d556c6d6f181f2.e18900865dd3b5df8db3cab844f5ae04363804aa9e79357144b7f81ff929b5aa9a3bf678cc24e8c76bc412cc6c58a699063f2ccfea399f68af0cd54db17e9384d7fcb17d88eca5e7d153c1a2dfc3e71f730bde623644e3344b7216e50efaf487e92428d4069807b7582287c6bfd074460c2ee871abdab23628e30536108ef0a8e96ba2e167d067d9824687e05163b62529739153cb6661b2d6b53b00ef6c6a477e497903507cf399cd334b8b06ff216ef1bf24d95f255faa6a597e35746d4af5aa41f1a6d3a090ada53ae7f041a760d7b0bab64d406b910b420b91a7917b4a83d011cbdd48000fe5355f653c8df50a74d9b3eda8ca355170108b2e75b0eb120021da08b6c429916e.hTobhidubEtUVKPu4PYRqPv4ArowIWAgqonHTRyPfIs"
     },
     "bpmoc" :{
       "serverName":"vhost001.bpm.ibmcloud.com",
@@ -16,7 +28,7 @@
       "basicAuth":"Y29nbml0aXZlYnBtZW1haWxAZ21haWwuY29tOmNvZ25pdGl2ZQ=="
     },
     "dbCredentials" : {
-      "url": "https://01bcc074-b3a0-4b07-93c6-eade6fb3ce50-bluemix:cd68d33a28d499bc6211810a56a0b99393a699190630f7811c438149be944500@01bcc074-b3a0-4b07-93c6-eade6fb3ce50-bluemix.cloudant.com"
+        "url": "https://6e9e4168-18e7-47a1-89a2-840f678229b4-bluemix:00146ba6457472cc2ec5eb6601870a6e50e2f3145b9787d4017c59860864f6d7@6e9e4168-18e7-47a1-89a2-840f678229b4-bluemix.cloudant.com"
     },
     "debug":true,
     "port": 3001,
