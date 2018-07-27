@@ -2379,6 +2379,7 @@ button,
     color: #ffffff;
     cursor: pointer;
     display: inline-block;
+    padding: 0 3.5em;
     font-family: "Montserrat", sans-serif;
     height: 3.5em;
     line-height: 3.5em;
@@ -2529,7 +2530,7 @@ button,
     input[type="button"],
     button,
     .button {
-        padding: 0;
+        padding: 0px 7px 0px 7px;
     }
 }
 
@@ -2569,6 +2570,8 @@ button,
 
         .flex.flex-3 .flex-item.left {
             text-align: right;
+            position: relative;
+            top: -101px;
         }
 
 @media screen and (max-width: 980px) {
@@ -2921,7 +2924,7 @@ button,
 
     #banner h1 {
         font-size: 2em;
-        color: #e77817;
+        color: #fff;
         margin: 0 0 0.5em 3.8em;
         padding: 7% 0% 7% 0%;
         font-weight: 700;
@@ -2968,7 +2971,11 @@ button,
     }
 
         #banner h1 {
-            font-size: 2em;
+            font-size: 14px;
+    margin: 0% 0% 0% 0%;
+    padding: 0% 0% 0% 0%;
+    width: 44%;
+    color: #fff;
         }
 
         #banner p {
@@ -3050,6 +3057,8 @@ body.is-loading #banner .content {
         -ms-flex-direction: column;
         flex-direction: column;
         text-align: center;
+   position: relative;
+    top: 0px;
     }
 
         #one .flex-item.left br, #one .flex-item.right br {

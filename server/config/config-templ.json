@@ -12,7 +12,10 @@
     },
     "SOR":{
       "systemname":"claimsystemname",
+	  "servertimezone":"Continent/City",
       "claimapiurl":"restcalltoclaim creation",
+	  "attachmentapiurl":"restcalltoclaim creation",
+	  "uploadapiurl":"restcalltoclaim creation",
       "claimtoken":"jwt token to accompany rest call"
     },
     "bpmoc" :{
