@@ -91,7 +91,6 @@ var sendMessage = function(config,req,wkid,res,next){
           password: config.conversation.password,
           version: config.conversation.version,
           version_date: config.conversation.versionDate});
-
   conversation.message(
       {
       workspace_id: wkid,

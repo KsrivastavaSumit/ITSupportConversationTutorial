@@ -101,6 +101,7 @@ var moment = require('moment');
   var req = client.post(config.SOR.claimapiurl, args, function(err, response) {
         if (err[0]) {
           console.log('error:', JSON.stringify(err,null,1).substring(0,120));
+
           next(config,res,{'Error': err[0].message + ". Error with rmA. Please contact your administrator"});
         }
         else {

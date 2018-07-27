@@ -17,7 +17,7 @@ export class ConversationComponent implements OnInit, AfterViewChecked {
   private isLoading = true ;
 
   currentDialog : Sentence[]=[];
-  context={'type':'base','UTCOffset': 0}; // used to keep the Conversation context
+  context={'type':'base','UTCOffset': 0,'Action':''}; // used to keep the Conversation context
   message:string;
   type:string = "base";
   /**
@@ -30,7 +30,7 @@ export class ConversationComponent implements OnInit, AfterViewChecked {
     this.loadingComplete = false;
     setTimeout(()=> {
        this.callConversationBFF('');
-     }, 4000);
+     }, 1000);
 
      // send blank to initiate conversation from Wantson side
     //this.callConversationBFF(''); // sending empty to get a welcome
@@ -68,19 +68,20 @@ export class ConversationComponent implements OnInit, AfterViewChecked {
         if(data.context.Action){
               if (data.context.Action == "createFNOLinSOR")
               {
+                  this.context.Action = null;
                   this.context.UTCOffset = new Date().getTimezoneOffset();
                   this.claimService.submitClaimInfo(this.context).subscribe(
                       data1=>{
-                          s.text ="Here is your reference for future communication: <b>" + data1.eventNumber +"</b>. Thank you for giving us an opportunity to serve.";
-                          this.isLoading = false;
-                          this.loadingComplete = true;
-                          this.currentDialog.push(s);
-                          this.claimService.submitChatInfo(this.currentDialog, data1.eventId).subscribe(
+                              s.text ="Here is your reference for future communication: <b>" + data1.eventNumber +"</b>. Thank you for giving us an opportunity to serve.";
+                              this.isLoading = false;
+                              this.loadingComplete = true;
+                              this.currentDialog.push(s);
+                              this.claimService.submitChatInfo(this.currentDialog, data1.eventId).subscribe(
                             data2=>{
                             },
                             error=>
                             {
-                                alert("Recording could not be sent");
+                                this.context.Action = "createFNOLinSOR";
                             }
                           );
                       },
@@ -129,7 +130,7 @@ export class ConversationComponent implements OnInit, AfterViewChecked {
 
   clear(){
     this.currentDialog.length = 0;
-    this.context={'type':'base','UTCOffset':0};
+    this.context={'type':'base','UTCOffset':0,'Action':''};
     this.callConversationBFF('');
   }
 
