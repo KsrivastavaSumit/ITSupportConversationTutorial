@@ -17,12 +17,26 @@ const watson = require('watson-developer-cloud');
 const bpmoc  = require('./supplier-bpm-client');
 const persist= require('./persist');
 
+/**
+ * Watson SDK automaticly search for the correct enviromental variables in the .env
+ * file i.e. username and password or IAM credentials
+ */
+
+
+
+
+
 module.exports = {
   /**
   Specific logic for the conversation related to IT support. From the response the
   code could dispatch to BPM.
   It persists the conversation to remote cloudant DB
   */
+  /*Car DB start*/
+                    //process.env.WORKSPACE_ID
+  //const workspace = config.WORKSPACE_ID|| '<workspace-id>';
+  /*Car DB end*/
+
    itSupportConversation : function(config,req,res) {
         // this logic applies when the response is expected to be a value to be added to a context variable
         // the context variable name was set by the conversation dialog

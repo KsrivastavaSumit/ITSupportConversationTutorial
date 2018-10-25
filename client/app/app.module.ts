@@ -7,6 +7,8 @@ import { AppComponent }         from './app.component';
 import { ConversationComponent} from './conv/conversation.component';
 import { ConversationService }  from './conv/conversation.service';
 import { ClaimService }  from './claim/claim.service';
+import { STTService }  from './stt/STT.service';
+import { STTComponent } from './stt/stt.component';
 import { HomeComponent }        from './home.component';
 import { AdvisorComponent}  from './advisor/advisor.component';
 import { AdvisorService }   from './advisor/advisor.service';
@@ -15,11 +17,11 @@ import {BusyModule} from 'angular2-busy';
 import { LoadersCssModule } from 'angular2-loaders-css';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
-  { path: 'conversation/:type', component: ConversationComponent },
-  { path: 'advisor', component: AdvisorComponent},
+  { path: '', component: HomeComponent,pathMatch: 'full' },
+  { path: 'conversation/:type', component: ConversationComponent,pathMatch: 'full' },
+  { path: 'advisor', component: AdvisorComponent,pathMatch: 'full'},
   // otherwise redirect to home
-  { path: '**', redirectTo: '' }
+  { path: '**', redirectTo: '',pathMatch: 'full' }
 ]
 
 @NgModule({
@@ -38,7 +40,7 @@ const routes: Routes = [
     LoadersCssModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [ConversationService,AdvisorService,ClaimService],
+  providers: [ConversationService,AdvisorService,ClaimService, STTService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
