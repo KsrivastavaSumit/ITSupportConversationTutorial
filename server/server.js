@@ -1,4 +1,4 @@
-/**
+/*
  * Copyright 2017 IBM Corp. All Rights Reserved.
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
@@ -30,10 +30,18 @@ app.use(express.static(path.join(__dirname, '../dist')));
 
 // Set specific api routes
 var config = require('./config/config.json');
+require('dotenv').config();
 require('./routes/api')(app,config);
+
+// Bootstrap application settings
+require('./config/express')(app,config);
+// error-handler settings
+require('./config/error-handler')(app);
+
 
 // Catch all other routes and return the index file
 app.get('*', (req, res) => {
+  console.log("audio");
   res.sendFile(path.join(__dirname, '../dist/index.html'));
 });
 

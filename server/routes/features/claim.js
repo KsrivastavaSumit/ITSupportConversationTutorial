@@ -6,8 +6,88 @@ module.exports = {
  }, //createFNOLinSOR
         createDocinSOR:function(config,attachmentmodel,req,res) {
         sendDoc(config,attachmentmodel,req,res);
- } //createDoc
+}, //createDoc
+        createDiaryinSOR:function(config,diarymodel,req,res) {
+        sendDiary(config,diarymodel,req,res);
+ }, //create diary
+        sendClaimDirect: function(watsonres,config,claimmodel, callback)
+        {
+          var moment = require('moment');
+            if (config.debug) {
+                console.log("--- Connect to System Of Record: " + config.SOR.systemname);
+                console.log("---Reading the request " + watsonres.context.PolicyNumber + " " + watsonres.context.ReportingPerson);
+            }
 
+            var Client = require('node-rest-client').Client;
+            var client = new Client();
+            claimmodel.reporterEntity.zipCode=watsonres.context.AddressZip;
+            var originaltime = tConvert(watsonres.context.TimeOfEvent);
+            var convertedtimeOfEvent = tConvertbyZone(originaltime,config.SOR.servertimezone);
+
+            var originaldateofevent =watsonres.context.DateofEvent;
+            if ((originaltime.indexOf('AM') >0 && convertedtimeOfEvent.indexOf('PM')>0) ||
+            (originaltime.indexOf('PM') >0 && convertedtimeOfEvent.indexOf('AM')>0))
+            {
+                  originaldateofevent = moment(originaldateofevent , "YYYY-MM-DD").subtract(1,'d').format("MM/DD/YYYY");
+            }
+            else
+            {
+                  originaldateofevent = moment(originaldateofevent , "YYYY-MM-DD").format("MM/DD/YYYY");
+            }
+
+
+            claimmodel.timeOfEvent =convertedtimeOfEvent;
+            claimmodel.dateOfEvent = originaldateofevent;
+            claimmodel.dateReported = moment().format ('MM/DD/YYYY');
+            console.log(convertedtimeOfEvent);
+            console.log(originaldateofevent);
+            console.log(claimmodel.timeOfEvent );
+
+            claimmodel.timeReported =tConvertbyZone(tConvert(moment().format('hh:mm A')),config.SOR.servertimezone);
+            claimmodel.reporterEntity.emailAddress =watsonres.context.Email;
+            claimmodel.reporterEntity.phone1 = watsonres.context.PhoneNumber;
+            var namearray = getname(watsonres.context.ReportingPerson);
+            claimmodel.reporterEntity.firstName =namearray[0];
+            claimmodel.reporterEntity.lastName = namearray[1];
+            claimmodel.reporterEntity.taxId = "0000-00-" +watsonres.context.SSN;
+            claimmodel.reporterEntity.comments = "Timezone of reporting person was offset by: " + watsonres.context.UTCOffset;
+            claimmodel.eventDescription = "PolicyNumber is " + watsonres.context.PolicyNumber + ". Reported By: " + watsonres.context.ReportingPerson  + ". Timezone of reporting person was offset by: " + watsonres.context.UTCOffset;
+
+            // set content-type header and data as json in args parameter
+            var args = {
+                data: claimmodel,
+                headers: { "Content-Type": "application/json", "Authorization": config.SOR.claimtoken }
+            }
+            var eventId = 0;
+
+            var req = client.post(config.SOR.claimapiurl, args, function(err, response) {
+                  if (err[0]) {
+                    console.log('error:', JSON.stringify(err,null,1).substring(0,120));
+                    watsonres.output.text =err[0].message + "Error with rmA. Please contact your administrator";
+                    callback(null,watsonres);
+                  }
+                  else {
+                    console.log(err.eventNumber + ": " +err.eventId);
+                    watsonres.output.text ="Here is your reference for future communication: <b>" + err.eventNumber +"</b>. Thank you for giving us an opportunity to serve."
+                    callback(null,watsonres);
+                  }
+            });
+            req.on('requestTimeout', function (req) {
+                console.log('request has expired');
+                req.abort();
+            });
+
+            req.on('responseTimeout', function (res) {
+                console.log('response has expired');
+            });
+
+            //it's usefull to handle request errors to avoid, for example, socket hang up errors on request timeouts
+            req.on('error', function (err) {
+                console.log('request error', err);
+                watsonres.output.text ="Communication error with rmA. Please contact your administrator" ;
+                callback(null,watsonres);
+            });
+        }
 } // exports
 
 // ------------------------------------------------------------
@@ -125,6 +205,7 @@ var moment = require('moment');
 
 } // sendClaim
 
+
 var sendDoc = function(config,attachmentmodel,req,res){
   var moment = require('moment');
   var fs = require("fs");
@@ -180,9 +261,9 @@ var sendDoc = function(config,attachmentmodel,req,res){
               }
               else {
                 console.log('Link the attachment with event');
-                res.status(200).send({'Success': "Chat record attached."});
                 //we dont wnt to send a response back tht the file could not be sent.
-              }      // raw response
+                //res.status(200).send({'Success': "Chat record attached."});
+              }
             });
 
           }
@@ -214,13 +295,62 @@ var sendDoc = function(config,attachmentmodel,req,res){
 
 } // sendDoc
 
+var sendDiary = function(config,diarymodel,req,res){
+var moment = require('moment');
+  if (config.debug) {
+      console.log("--- Tryting to create diary: " + config.SOR.systemname);
+  }
 
+  var Client = require('node-rest-client').Client;
+  var client = new Client();
+  diarymodel.entryName ="Watson Event : " //;+ event ref
+  diarymodel.completeTime ="10:00 AM"
+  diarymodel.completeDate = moment().format("MM/DD/YYYY");
+  console.log(diarymodel.completeDate);
+  diarymodel.calledBy ="IBM Watson";
+  diarymodel.sysExData.attachRecordid =diarymodel.attachRecordid;
+  // set content-type header and data as json in args parameter
+  var args = {
+      data: diarymodel,
+      headers: { "Content-Type": "application/json", "Authorization": config.SOR.claimtoken }
+  }
+
+  var req = client.post(config.SOR.diaryapiurl, args, function(err, response) {
+        if (err[0]) {
+          console.log('error:', JSON.stringify(err,null,1).substring(0,120));
+          res.status(500).send({'Error': err[0].message + ". Error with rmA during diary creation. Please contact your administrator"});
+        }
+        else {
+          res.status(200).send({'Success': "diary record created."});
+        }
+  });
+  req.on('requestTimeout', function (req) {
+      console.log('request has expired');
+      req.abort();
+  });
+
+  req.on('responseTimeout', function (res) {
+      console.log('response has expired');
+  });
+
+  //it's usefull to handle request errors to avoid, for example, socket hang up errors on request timeouts
+  req.on('error', function (err) {
+      console.log('request error', err);
+      res.status(500).send(response);
+  });
+
+} // sendDiary
 
 var processcreateFNOLinSORResponse = function(config,res,response){
-    if (config.debug) {console.log(" BASE <<< "+JSON.stringify(response,null,2));} //
+    if (config.debug)
+    {
+      console.log(" BASE <<< "+JSON.stringify(response,null,2));
+    } //
     if (response.Error !== undefined) {
         res.status(500).send(response);
-    } else {
+    }
+    else
+    {
         res.status(200).send(response);
     }
 }

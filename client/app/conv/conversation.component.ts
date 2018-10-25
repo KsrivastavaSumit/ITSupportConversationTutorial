@@ -1,9 +1,12 @@
 import {Component, AfterViewChecked, ElementRef, ViewChild, OnInit} from '@angular/core';
 import { ConversationService }  from './conversation.service';
+import { STTService }  from '../stt/STT.service';
 import { ClaimService }  from '../claim/claim.service';
 import { Sentence } from "./Sentence";
 import {ActivatedRoute, Params} from '@angular/router';
 
+declare const navigator: any;
+declare const MediaRecorder: any;
 
 @Component({
     moduleId: module.id,
@@ -23,18 +26,17 @@ export class ConversationComponent implements OnInit, AfterViewChecked {
   /**
   When creating a conversation component call Watson to get a greetings message as defined in the Dialog. This is more user friendly.
   */
-  constructor(private convService : ConversationService, private claimService : ClaimService, private route: ActivatedRoute){
+  constructor(private convService : ConversationService, private claimService : ClaimService,
+    private sttService: STTService ,private route: ActivatedRoute){
     // depending of the url parameters the layout can be simple or more demo oriented with instruction in html
     this.type=this.route.snapshot.params['type'];
     this.isLoading = true;
     this.loadingComplete = false;
     setTimeout(()=> {
        this.callConversationBFF('');
-     }, 1000);
+     }, 1000); // this one second is fake wait just to give animpression that something is happening
+  };
 
-     // send blank to initiate conversation from Wantson side
-    //this.callConversationBFF(''); // sending empty to get a welcome
-  }
 
   @ViewChild('scrollMe') private myScrollContainer: ElementRef;
 
@@ -140,4 +142,5 @@ export class ConversationComponent implements OnInit, AfterViewChecked {
         this.submit();
       }
   }
+
 }

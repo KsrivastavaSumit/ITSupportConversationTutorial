@@ -1,5 +1,7 @@
 import {Component} from '@angular/core';
 import { Router }   from '@angular/router';
+import { Headers, Http,Response,RequestOptions } from '@angular/http';
+
 /*
 Main page component to display access to the different demo features.
 */
@@ -14,7 +16,6 @@ Main page component to display access to the different demo features.
     constructor(private router: Router) {
     }
 
-
     conversation(){
       this.router.navigate(['conversation/base']);
     }
@@ -22,8 +23,11 @@ Main page component to display access to the different demo features.
     conversationSodb(){
       this.router.navigate(['conversation/sodb']);
     }
-
     advisor(){
       this.router.navigate(['advisor']);
     }
+
+    audioworks(){
+          window.location.href='http://localhost:3001/audioworks/';
+      }
 }
