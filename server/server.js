@@ -18,27 +18,38 @@ const express = require('express');
 const path = require('path');
 
 const http = require('http');
-const https = require('https');
-const privateKey = fs.readFileSync('/etc/letsencrypt/live/yourdomain.com/privkey.pem', 'utf8');
-const certificate = fs.readFileSync('/etc/letsencrypt/live/yourdomain.com/cert.pem', 'utf8');
-const ca = fs.readFileSync('/etc/letsencrypt/live/yourdomain.com/chain.pem', 'utf8');
+// ***************************************************************************************
+//
+// For https uncomment below lines after setting up your certificate
+//this article was followed https://itnext.io/node-express-letsencrypt-generate-a-free-ssl-certificate-and-run-an-https-server-in-5-minutes-a730fbe528ca
+// to implement https free certificate on server
+//const https = require('https');
+//const privateKey = fs.readFileSync('/etc/letsencrypt/live/yourdomain.com/privkey.pem', 'utf8');
+//const certificate = fs.readFileSync('/etc/letsencrypt/live/yourdomain.com/cert.pem', 'utf8');
+//const ca = fs.readFileSync('/etc/letsencrypt/live/yourdomain.com/chain.pem', 'utf8');
 
-const credentials = {
-	key: privateKey,
-	cert: certificate,
-	ca: ca
-};
+//const credentials = {
+//	key: privateKey,
+//	cert: certificate,
+//	ca: ca
+//};
 // Starting both http & https servers
-const httpServer = http.createServer(app);
-const httpsServer = https.createServer(credentials, app);
 
-httpsServer.listen(443, () => {
-	console.log('HTTPS Server running on port 443');
-});
+//const httpsServer = https.createServer(credentials, app);
+
+//httpsServer.listen(443, () => {
+//	console.log('HTTPS Server running on port 443');
+//});
+
+// ***************************************************************************************
+
+const app = express();
+
+const httpServer = http.createServer(app);
 
 const bodyParser = require('body-parser');
 
-const app = express();
+
 
 // Parsers for POST JSON PAYLOAD
 app.use(bodyParser.json());

@@ -1,0 +1,44 @@
+{
+    "conversation" :{
+      "version" : "v1",
+      "versionDate":"2018-02-16",
+      "username":"3566083f-ae01-4b88-9e49-69e55155ae22",
+      "password":"twcNvdh0pKng",
+      "workspace1":"1dca2a14-c25e-454f-9a0e-53605348bf10",
+      "conversationId":"samplermAConversations",
+      "workspace2":"1dca2a14-c25e-454f-9a0e-53605348bf10",
+      "workspace3":"1dca2a14-c25e-454f-9a0e-53605348bf10",
+      "usePersistence": false
+    },
+    "STT": {
+        "url": "https://stream.watsonplatform.net/speech-to-text/api",
+        "SPEECH_TO_TEXT_USERNAME": "81d4dfb5-a5b5-442b-9500-a29a0cd6053c",
+        "SPEECH_TO_TEXT_PASSWORD":"n8iJ6pUPhNoq"
+    },
+    "TTS": {
+        "url": "https://stream.watsonplatform.net/text-to-speech/api",
+        "TEXT_TO_SPEECH_USERNAME":"e86c4341-7c0d-477a-a102-5ad51edfb397",
+        "TEXT_TO_SPEECH_PASSWORD":"T5yFixIpyay6"
+    },
+    "SOR":{
+      "systemname":"rmA",
+      "servertimezone":"America/New_York",
+      "claimapiurl":"http://ec2-54-149-179-86.us-west-2.compute.amazonaws.com/RiskmasterAPI/events/event",
+      "attachmentapiurl":"http://ec2-54-149-179-86.us-west-2.compute.amazonaws.com/RiskmasterAPI/attachments",
+      "uploadapiurl":"http://ec2-54-149-179-86.us-west-2.compute.amazonaws.com/RiskmasterAPI/upload",
+      "diaryapiurl":"http://ec2-54-149-179-86.us-west-2.compute.amazonaws.com/RiskmasterAPI/DiaryEntry/diaryrecord",
+      "claimtoken":"1ec4163b94294df29957cff829e6ab09766b07b5e9f9f99d8ad41062c95db69502d556c6d6f181f2.e18900865dd3b5df8db3cab844f5ae04363804aa9e79357144b7f81ff929b5aa9a3bf678cc24e8c76bc412cc6c58a699063f2ccfea399f68af0cd54db17e9384d7fcb17d88eca5e7d153c1a2dfc3e71f730bde623644e3344b7216e50efaf487e92428d4069807b7582287c6bfd074460c2ee871abdab23628e30536108ef0a8e96ba2e167d067d9824687e05163b62529739153cb6661b2d6b53b00ef6c6a477e497903507cf399cd334b8b06ff216ef1bf24d95f255faa6a597e35746d4af5aa41f1a6d3a090ada53ae7f041a760d7b0bab64d406b910b420b91a7917b4a83d011cbdd48000fe5355f653c8df50a74d9b3eda8ca355170108b2e75b0eb120021da08b6c429916e.hTobhidubEtUVKPu4PYRqPv4ArowIWAgqonHTRyPfIs"
+    },
+    "bpmoc" :{
+      "serverName":"vhost001.bpm.ibmcloud.com",
+      "processName":"SOBD/SOAPStart.tws",
+      "basicAuth":"Y29nbml0aXZlYnBtZW1haWxAZ21haWwuY29tOmNvZ25pdGl2ZQ=="
+    },
+    "dbCredentials" : {
+        "url": "https://6e9e4168-18e7-47a1-89a2-840f678229b4-bluemix:00146ba6457472cc2ec5eb6601870a6e50e2f3145b9787d4017c59860864f6d7@6e9e4168-18e7-47a1-89a2-840f678229b4-bluemix.cloudant.com"
+    },
+    "WORKSPACE_ID":"c70ec911-4f76-4955-b524-553e9e643395",
+    "debug":true,
+    "port": 3001,
+    "version": "v0.0.7"
+}
