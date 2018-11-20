@@ -11,9 +11,10 @@ Main page component to display access to the different demo features.
     styleUrls: ['./home.component.css','./app.component.css'],
     templateUrl: './home.component.html'
   })
-=
-    constructor(private router: Router) {
-    }
+
+  export class HomeComponent {
+   constructor(private router: Router) {
+   }
 
     conversation(){
       this.router.navigate(['conversation/base']);
