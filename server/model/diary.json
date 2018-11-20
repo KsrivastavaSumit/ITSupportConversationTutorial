@@ -1,0 +1,79 @@
+
+
+{
+  "legacyUniqueIdentifier": "",
+  "attFormCode": 0,
+  "attFormScrty": 0,
+  "attParentCode": 0,
+  "attSecRecId": 0,
+  "autoId": 0,
+  "diaryDeleted": false,
+  "diaryVoid": false,
+  "estimateTime": 0,
+  "notifyFlag": false,
+  "routeFlag": false,
+  "entryId": 0,
+  "entryName": "Watson Event : 007963",
+  "entryNotes": "",
+  "createDate": "",
+  "completeTime": "10:00 AM",
+  "completeDate": "10/08/2018",
+  "priority": 1,
+  "statusOpen": false,
+  "autoConfirm": false,
+  "responseDate": "",
+  "response": "",
+  "assigningUser": "",
+  "assignedGroup": "",
+  "isAttached": true,
+  "attachTable": "EVENT",
+  "attachRecordid": 7963,
+  "regarding": "",
+  "teTracked": false,
+  "teStartTime": "",
+  "teEndTime": "",
+  "teTotalHours": 0,
+  "teExpenses": 0,
+  "completedByUser": "",
+  "autoLateNotify": false,
+  "nonRouteFlag": false,
+  "nonRollFlag": false,
+  "calledBy": "Watson",
+  "issuePeriod": 0,
+  "issueTillDays": 0,
+  "emailNotifyFlag": null,
+  "addedByUser": "",
+  "updatedByUser": "",
+  "dttmRcdAdded": "",
+  "dttmRcdLastUpd": null,
+  "diarystatus": 0,
+  "supplementals": [
+    {
+      "caption": "",
+      "fieldName": "",
+      "fieldType": 0,
+      "value": {},
+      "values": {}
+    }
+  ],
+  "links": [
+    {
+      "href": "",
+      "rel": "",
+      "method": "",
+      "recordId": 0
+    }
+  ],
+  "associatedEntities": [
+    {
+      "href": "",
+      "rel": "",
+      "method": "",
+      "recordId": 0
+    }
+  ],
+  "sysExData": {"activityList": [{"id": "457", "desc": "CQE Complete Quick Entry"} ],
+  "assignedUserList": [{"name": "Walker,Terry", "userID": "38", "groupID": "0","email":"" ,"type": "U"}] ,"attachTable":"EVENT","attachRecordid":7963
+}
+
+}
