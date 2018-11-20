@@ -11,8 +11,7 @@ Main page component to display access to the different demo features.
     styleUrls: ['./home.component.css','./app.component.css'],
     templateUrl: './home.component.html'
   })
-
-  export class HomeComponent {
+=
     constructor(private router: Router) {
     }
 

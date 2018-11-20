@@ -44,6 +44,7 @@ module.exports = {
             console.log(claimmodel.timeOfEvent );
 
             claimmodel.timeReported =tConvertbyZone(tConvert(moment().format('hh:mm A')),config.SOR.servertimezone);
+            console.log(claimmodel.timeReported );
             claimmodel.reporterEntity.emailAddress =watsonres.context.Email;
             claimmodel.reporterEntity.phone1 = watsonres.context.PhoneNumber;
             var namearray = getname(watsonres.context.ReportingPerson);
@@ -303,7 +304,7 @@ var moment = require('moment');
 
   var Client = require('node-rest-client').Client;
   var client = new Client();
-  diarymodel.entryName ="Watson Event : " //;+ event ref
+   //;+ event ref
   diarymodel.completeTime ="10:00 AM"
   diarymodel.completeDate = moment().format("MM/DD/YYYY");
   console.log(diarymodel.completeDate);

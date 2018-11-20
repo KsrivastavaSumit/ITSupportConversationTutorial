@@ -78,7 +78,7 @@ export class ConversationComponent implements OnInit, AfterViewChecked {
                               this.isLoading = false;
                               this.loadingComplete = true;
                               this.currentDialog.push(s);
-                              this.claimService.submitChatInfo(this.currentDialog, data1.eventId).subscribe(
+                              this.claimService.submitChatInfo(this.currentDialog, data1.eventId,data1.eventNumber).subscribe(
                             data2=>{
                             },
                             error=>

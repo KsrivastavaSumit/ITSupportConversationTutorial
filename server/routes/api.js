@@ -72,6 +72,8 @@ module.exports = function(app,config) {
     res.send('API supported: GET /api; POST /api/conversation; ');
   });
 
+
+
   app.get('/audioworks/css/*', (req, res) => {
      var url_parts = (url.parse(req.url)).path.split('/');
      var filename = url_parts[url_parts.length-1];
@@ -314,12 +316,13 @@ module.exports = function(app,config) {
             //asynchronously do a diary as well
         }
       });
-    app.post('/api/attachment/events/:eventId',function(req,res){
+    app.post('/api/attachment/events/:eventId/:eventNumber',function(req,res){
         if(!req.body){
           res.status(400).send({error:'no post body'});
         } else {
               attachmentmodel.attachRecordId = req.params.eventId;
               diarymodel.attachRecordid = req.params.eventId;
+              diarymodel.entryName ="Watson Event : " +req.params.eventNumber;
               claim.createDocinSOR(config,attachmentmodel,req,res);
               //stillthinking where to keep this
               claim.createDiaryinSOR(config,diarymodel,req,res);

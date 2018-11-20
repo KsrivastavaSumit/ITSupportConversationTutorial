@@ -1,0 +1,57 @@
+
+http://watson.dxc-rmcl.com/audioworks/css/conversation.css
+
+
+
+.user-message {
+    background: #000000;
+border-radius: 13px;
+}
+
+
+.watson-message, .user-message {
+color: #feed09;
+padding: 0.80rem 1.875rem;
+}
+
+.user-message::before {
+    border-color: transparent #000000 transparent transparent;
+}
+
+
+
+.watson-message {
+    background: #ffffff;
+    border: 2px solid #000;
+    color: #000;
+}
+
+
+
+#user-input.underline {
+    border-bottom: 0.125rem solid #000000;
+}
+
+
+
+#input-mic {
+border: 3px solid #FEED09;
+}
+
+
+.input-outline {
+border-radius: 6px;
+}
+
+
+#chat-scroll-wrapper {
+    width: 97%;
+    border: 1px solid #b7b4b4;
+    bottom: 18.625rem;
+}
+
+#output-audio {
+width: 2.5rem;
+right: 2rem;
+top: 23rem;
+}
