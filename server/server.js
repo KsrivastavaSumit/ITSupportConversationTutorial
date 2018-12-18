@@ -16,7 +16,7 @@
 // Get dependencies
 const express = require('express');
 const path = require('path');
-
+const fs = require('fs');
 const http = require('http');
 // ***************************************************************************************
 //
@@ -57,7 +57,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 
 // Point static path to dist
 app.use(express.static(path.join(__dirname, '../dist')));
-
+app.use(express.static(__dirname, { dotfiles: 'allow' } ));
 // Set specific api routes
 var config = require('./config/config.json');
 require('dotenv').config();

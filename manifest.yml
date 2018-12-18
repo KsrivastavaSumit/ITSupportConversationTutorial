@@ -1,10 +1,16 @@
 applications:
 - path: .
-  name: refarch-cogni-conversation-broker
-  host: refarch-wcs-broker
+  name: Claims Conversation Broker
+  host: clm-conv-brkr
+  memory:  256M
   instances: 1
-  domain: mybluemix.net
-  memory: 256M
+  domain: <mybluemix.net>
   disk_quota: 1024M
-  services:
-    - CyanConversations
+  env:
+    wcs_username: <wcs_username>
+    wcs_password: <wcs_password>
+    wcs_workspace: <wcs_workspace>
+    show_all_logs: false
+    receiver_email_address: yourstruly@gmail.com
+    sender_email_address: abc@gmail.com
+    sender_email_password: xyz123
